@@ -64,3 +64,50 @@ $i = 0;
 do {
     echo $i++; // incremente after evaluation
 } while ($i < 5);
+
+// loop for
+for ($x = 0; $x < 10; $x++) {
+    echo $x;
+} // this prints 0123456789
+
+echo PHP_EOL;
+
+$wheels = ['bicycle' => 2, 'Car' => 4];
+
+// that's different of python the variable comes before of a unit variable.
+foreach ($wheels as $wheel_count) {
+    echo $wheel_count . PHP_EOL;
+
+    /**
+     * prints:
+     * 2
+     * 4
+     */
+}
+
+// this returns $vehicle like a key, $wheel_count like a value
+foreach ($wheels as $vehicle => $wheel_count) {
+    echo "a $vehicle has $wheel_count wheels";
+}
+
+$i = 0;
+while ($i < 5) {
+    // break on 3
+    if ($i === 3) {
+        break;
+    }
+
+    echo $i++ . PHP_EOL; // this return 012
+    // if i wanna print 12 and ignore the 0
+    // i can increment beferoe valuation ++$i
+}
+
+for ($i = 0; $i < 5; $i++) {
+    if ($i === 3) {
+        continue;
+        /**
+         * the continue propertie jumps in case $i equals 3
+         */
+    }
+    echo $i; // prints 0124
+}
